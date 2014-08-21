@@ -32,12 +32,14 @@ angular.module('directory.controllers', [])
 
         // $http({method: 'GET', url: './resource/test2.txt', headers : {"Content-Type": "text/plain"}})
 
-        $http.get('./resource/test.txt')
+        $http.get('./resource/test.json')
         .success(function(data, status, headers, config) {
           // this callback will be called asynchronously
           // when the response is available
-          $scope.content = data;
-          console.error(arguments);
+          $scope.title = data.book;
+          $scope.content = data.content;
+
+          
         })
         .error(function(data, status, headers, config) {
           // called asynchronously if an error occurs
