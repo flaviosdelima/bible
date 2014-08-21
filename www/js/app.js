@@ -34,8 +34,14 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
                 url: '/employees/:employeeId/reports',
                 templateUrl: 'templates/employee-reports.html',
                 controller: 'EmployeeReportsCtrl'
+            })
+
+            .state('read', {
+                url: '/read',
+                templateUrl: 'templates/bible-content.html',
+                controller: 'BibleReadCtrl'
             });
 
-        $urlRouterProvider.otherwise('/search');
+        $urlRouterProvider.otherwise('/read');
 
     });
