@@ -24,4 +24,27 @@ angular.module('directory.controllers', [])
     .controller('EmployeeReportsCtrl', function ($scope, $stateParams, Employees) {
         console.log('reports');
         $scope.employee = Employees.get({employeeId: $stateParams.employeeId, data: 'reports'});
+    })
+
+    .controller('BibleReadCtrl', function ($scope, $stateParams, $http, Employees) {
+        console.log('Bible Read');
+        $scope.content = "";
+
+        // $http({method: 'GET', url: './resource/test2.txt', headers : {"Content-Type": "text/plain"}})
+
+        $http.get('./resource/test.json')
+        .success(function(data, status, headers, config) {
+          // this callback will be called asynchronously
+          // when the response is available
+          $scope.title = data.book;
+          $scope.content = data.content;
+
+          
+        })
+        .error(function(data, status, headers, config) {
+          // called asynchronously if an error occurs
+          // or server returns response with an error status.
+          console.error(arguments);
+        });
+        
     });
