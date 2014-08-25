@@ -1,43 +1,23 @@
-angular.module('directory.controllers', [])
+angular.module('quickbible.controllers', [])
 
-    .controller('EmployeeListCtrl', function ($scope, Employees) {
+    .controller('HomeCtrl', function ($scope) {
 
-        $scope.searchKey = "";
-
-        $scope.clearSearch = function () {
-            $scope.searchKey = "";
-            $scope.employees = Employees.query();
-        }
-
-        $scope.search = function () {
-            $scope.employees = Employees.query({name: $scope.searchKey});
-        }
-
-        $scope.employees = Employees.query();
+        console.log('HomeCtrl');
     })
 
-    .controller('EmployeeDetailCtrl', function($scope, $stateParams, Employees) {
-        console.log('details');
-        $scope.employee = Employees.get({employeeId: $stateParams.employeeId});
-    })
-
-    .controller('EmployeeReportsCtrl', function ($scope, $stateParams, Employees) {
-        console.log('reports');
-        $scope.employee = Employees.get({employeeId: $stateParams.employeeId, data: 'reports'});
-    })
-
-    .controller('BibleReadCtrl', function ($scope, $stateParams, $http, Employees) {
+    .controller('BibleReadCtrl', function ($scope, $stateParams, $http) {
         console.log('Bible Read');
         $scope.content = "";
 
         // $http({method: 'GET', url: './resource/test2.txt', headers : {"Content-Type": "text/plain"}})
 
-        $http.get('./resource/test.json')
+        $http.get('./resource/result/창/1.json')
         .success(function(data, status, headers, config) {
           // this callback will be called asynchronously
           // when the response is available
           $scope.title = data.book;
-          $scope.content = data.content;
+          $scope.chapter = data.chapter;
+          $scope.content = data.verses;
 
           
         })

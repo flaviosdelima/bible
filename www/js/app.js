@@ -1,4 +1,4 @@
-angular.module('directory', ['ionic', 'directory.controllers', 'directory.services'])
+angular.module('quickbible', ['ionic', 'quickbible.controllers', 'quickbible.services'])
 
     .run(function ($ionicPlatform) {
         $ionicPlatform.ready(function () {
@@ -16,32 +16,20 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
 
     .config(function ($stateProvider, $urlRouterProvider) {
 
+        $urlRouterProvider.otherwise('/home');
+        
         $stateProvider
+        .state('home', {
+            url: '/home',
+            templateUrl: 'templates/home-template.html',
+            controller: 'HomeCtrl'
+        })
+        .state('read', {
+            url: '/read',
+            templateUrl: 'templates/bible-content.html',
+            controller: 'BibleReadCtrl'
+        });
 
-            .state('search', {
-                url: '/search',
-                templateUrl: 'templates/employee-list.html',
-                controller: 'EmployeeListCtrl'
-            })
-
-            .state('employee', {
-                url: '/employees/:employeeId',
-                templateUrl: 'templates/employee-detail.html',
-                controller: 'EmployeeDetailCtrl'
-            })
-
-            .state('reports', {
-                url: '/employees/:employeeId/reports',
-                templateUrl: 'templates/employee-reports.html',
-                controller: 'EmployeeReportsCtrl'
-            })
-
-            .state('read', {
-                url: '/read',
-                templateUrl: 'templates/bible-content.html',
-                controller: 'BibleReadCtrl'
-            });
-
-        $urlRouterProvider.otherwise('/read');
+       
 
     });
