@@ -131,12 +131,7 @@
 /Users/yeongbini/Workspace/ionic/myApp/platforms/android/assets/www/plugins/com.ionic.keyboard/www/keyboard.js \
 /Users/yeongbini/Workspace/ionic/myApp/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
 /Users/yeongbini/Workspace/ionic/myApp/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
-/Users/yeongbini/Workspace/ionic/myApp/platforms/android/assets/www/resource/bible \
-/Users/yeongbini/Workspace/ionic/myApp/platforms/android/assets/www/resource/test.json \
-/Users/yeongbini/Workspace/ionic/myApp/platforms/android/assets/www/resource/test.txt \
-/Users/yeongbini/Workspace/ionic/myApp/platforms/android/assets/www/resource/test2.txt \
+/Users/yeongbini/Workspace/ionic/myApp/platforms/android/assets/www/resource/1.json \
 /Users/yeongbini/Workspace/ionic/myApp/platforms/android/assets/www/templates/bible-content.html \
-/Users/yeongbini/Workspace/ionic/myApp/platforms/android/assets/www/templates/employee-detail.html \
-/Users/yeongbini/Workspace/ionic/myApp/platforms/android/assets/www/templates/employee-list.html \
-/Users/yeongbini/Workspace/ionic/myApp/platforms/android/assets/www/templates/employee-reports.html \
+/Users/yeongbini/Workspace/ionic/myApp/platforms/android/assets/www/templates/home-template.html \
 /Users/yeongbini/Workspace/ionic/myApp/platforms/android/ant-build/AndroidManifest.xml \

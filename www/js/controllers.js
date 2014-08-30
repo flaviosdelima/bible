@@ -11,7 +11,7 @@ angular.module('quickbible.controllers', [])
 
         // $http({method: 'GET', url: './resource/test2.txt', headers : {"Content-Type": "text/plain"}})
 
-        $http.get('./resource/result/창/1.json')
+        $http.get('./resource/1.json')
         .success(function(data, status, headers, config) {
           // this callback will be called asynchronously
           // when the response is available

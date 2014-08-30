@@ -6,16 +6,19 @@
 		        <h1 class="title">{{title}} {{chapter}}장</h1>
 		    </ion-header-bar>
 		    <ion-content>
-				<ion-list >
-					<ion-item ng-repeat="verb in content" > {{verb.verse}} </ion-item>
+				<ion-list id="bible-read">
+					<ion-item ng-repeat="verb in content" class ="verse"> <div style="width : 20px">1</div>{{verb.verse}} </ion-item>
 				</ion-list>
 			</ion-content>
 	    </ion-side-menu-content>
 	    <ion-side-menu side="left">
-	    	<ion-list>1234</ion-list>
-	    	<ion-list>1234</ion-list>
-	    	<ion-list>1234</ion-list>
-	    	<ion-list>1234</ion-list>
+	    	<ion-list>
+	    		<ion-item>1234</ion-item>
+	    		<ion-item>1234</ion-item>
+	    		<ion-item>1234</ion-item>
+	    		<ion-item>1234</ion-item>
+	    	</ion-list>
+	    	
 	    </ion-side-menu>
     </ion-side-menus>
 

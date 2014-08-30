@@ -30,3 +30,8 @@
     height: 90px;
 }
 
+#bible-read .verse{
+    white-space: normal;
+    padding: 5px;
+    border : none;
+}
