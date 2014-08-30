@@ -56,9 +56,7 @@ fs.readdir(path, function (err, files) {
 	    	verses : verses
 	    };
 
-	    
-
-	    var bookPath = './result/' + bookName;
+	    var bookPath = './result/' + bookInfo.index;
 
 	    // context.book = bookName;
 
