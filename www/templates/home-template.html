@@ -1,8 +1,13 @@
 
 <ion-content>
+	<div class="row">
+  		<div class="col col-book" ng-repeat="book in testBook" ng-click="showBook()">{{book.abbr}}</div>
+	</div>
+
 	<div class="button-bar">
 	    <a class="button button-outline button-positive" href="#/read">First</a>
 	    <a class="button button-outline button-positive">Second</a>
 	    <a class="button button-outline button-positive">Third</a>
 	</div>
 </ion-content>
+

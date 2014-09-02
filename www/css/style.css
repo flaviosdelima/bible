@@ -30,8 +30,30 @@
     height: 90px;
 }
 
-#bible-read .verse{
-    white-space: normal;
+#bible-read .verb-container{
+    white-space: nowrap;
     padding: 5px;
     border : none;
+}
+
+#bible-read .index{
+    vertical-align: top;
+    width: 20px; 
+    display: inline-block;
+}
+
+#bible-read .verb{
+    padding-right: 30px;
+    white-space: normal;
+    display: inline-block;
+}
+
+.col-book{
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    background: #f7f7f7;
+    text-align: center;
 }

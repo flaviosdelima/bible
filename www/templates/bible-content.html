@@ -3,21 +3,34 @@
 	<ion-side-menus>
 	    <ion-side-menu-content>
 	    	<ion-header-bar class="bar-dark">
+	    		<button class="button button-icon icon ion-navicon"></button>
 		        <h1 class="title">{{title}} {{chapter}}장</h1>
 		    </ion-header-bar>
 		    <ion-content>
-				<ion-list id="bible-read">
-					<ion-item ng-repeat="verb in content" class ="verse"> <div style="width : 20px">1</div>{{verb.verse}} </ion-item>
+				<ion-list id="bible-read" can-swipe="listCanSwipe">
+					<ion-item ng-repeat="verb in content" class ="verb-container"> 
+						<div class="index">{{verb.index}}</div>
+						<div class="verb">{{verb.verse}}</div>
+					</ion-item>
 				</ion-list>
 			</ion-content>
 	    </ion-side-menu-content>
-	    <ion-side-menu side="left">
-	    	<ion-list>
-	    		<ion-item>1234</ion-item>
-	    		<ion-item>1234</ion-item>
-	    		<ion-item>1234</ion-item>
-	    		<ion-item>1234</ion-item>
-	    	</ion-list>
+
+	    <ion-side-menu side="left" >
+	    	<ion-header-bar class="bar-positive bar bar-header">
+	    		<div class="buttons">
+				    <button class="button" ng-click="showDeleteButtons()">Delete</button>
+			    </div>
+		        <h1 class="title ng-binding">History</h1>
+		    </ion-header-bar>
+	    	<ion-content>
+		    	<ion-list show-delete="shouldShowDelete">
+		    		<ion-item><ion-delete-button class="ion-minus-circled"></ion-delete-button>1234</ion-item>
+		    		<ion-item><ion-delete-button class="ion-minus-circled"></ion-delete-button>1234</ion-item>
+		    		<ion-item><ion-delete-button class="ion-minus-circled"></ion-delete-button>1234</ion-item>
+		    		<ion-item><ion-delete-button class="ion-minus-circled"></ion-delete-button>1234</ion-item>
+	    		</ion-list>
+	    	</ion-content>
 	    	
 	    </ion-side-menu>
     </ion-side-menus>
