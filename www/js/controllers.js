@@ -1,10 +1,10 @@
 angular.module('quickbible.controllers', [])
 
-    .controller('HomeCtrl', function ($scope, $location, $ionicPopover) {
+    .controller('HomeCtrl', function ($scope, $location, $ionicModal) {
 
         console.log('HomeCtrl');
 
-        $ionicPopover.fromTemplateUrl('templates/bible-list.html', {
+        $ionicModal.fromTemplateUrl('templates/bible-list.html', {
             scope: $scope
         }).then(function(popover) {
             $scope.popover = popover;
@@ -51,6 +51,16 @@ angular.module('quickbible.controllers', [])
     })
     .controller('BibleListCtrl', function ($scope) {
         $scope.items = [
+            {text : 1},
+            {text : 1},
+            {text : 1},
+            {text : 1},
+            {text : 1},
+            {text : 1},
+            {text : 1},
+            {text : 1},
+            {text : 1},
+            {text : 1},
             {text : 1},
             {text : 1},
             {text : 1},
