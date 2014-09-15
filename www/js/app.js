@@ -28,6 +28,11 @@ QuickBible.config(function ($stateProvider, $urlRouterProvider) {
         url: '/read',
         templateUrl: 'templates/bible-content.html',
         controller: 'BibleReadCtrl'
+    })
+    .state('list', {
+        url: '/list',
+        templateUrl: 'templates/bible-list.html',
+        controller: 'BibleListCtrl'
     });
 
    

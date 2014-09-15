@@ -1,18 +1,19 @@
 angular.module('quickbible.controllers', [])
 
-    .controller('HomeCtrl', function ($scope) {
+    .controller('HomeCtrl', function ($scope, $location, $ionicPopover) {
 
         console.log('HomeCtrl');
 
-        $scope.bibleList = [];
-        angular.forEach(bible , function(value, key){
-            $scope.bibleList.push(value);
+        $ionicPopover.fromTemplateUrl('templates/bible-list.html', {
+            scope: $scope
+        }).then(function(popover) {
+            $scope.popover = popover;
         });
 
-        $scope.testBook = $scope.bibleList.slice(0,8);
 
-        $scope.showBook = function(){
-            console.error(arguments)
+        $scope.showList = function(){
+//            $location.path('/list');
+            $scope.popover.show();
         }
     })
 
@@ -47,4 +48,18 @@ angular.module('quickbible.controllers', [])
           console.error(arguments);
         });
         
+    })
+    .controller('BibleListCtrl', function ($scope) {
+        $scope.items = [
+            {text : 1},
+            {text : 1},
+            {text : 1},
+            {text : 1},
+            {text : 1},
+            {text : 1},
+            {text : 1},
+            {text : 1},
+            {text : 1},
+            {text : 1},
+        ]
     });
