@@ -22,12 +22,18 @@ QuickBible.config(function ($stateProvider, $urlRouterProvider) {
     .state('home', {
         url: '/home',
         templateUrl: 'templates/home-template.html',
-        controller: 'HomeCtrl'
+        controller: 'HomeCtrl',
+        reloadOnSearch: false
     })
     .state('read', {
-        url: '/read',
+        url: '/read:bookIndex',
         templateUrl: 'templates/bible-content.html',
         controller: 'BibleReadCtrl'
+    })
+    .state('list', {
+        url: '/list',
+        templateUrl: 'templates/bible-list.html',
+        controller: 'BibleListCtrl'
     });
 
    

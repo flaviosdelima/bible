@@ -12,7 +12,7 @@
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
-    <name>myAdd</name>
+    <name>Quick Bible</name>
     <description>
         An Ionic Framework and Cordova project.
     </description>

@@ -1,13 +1,54 @@
 
-<ion-content>
-	<div class="row">
-  		<div class="col col-book" ng-repeat="book in testBook" ng-click="showBook()">{{book.abbr}}</div>
-	</div>
+<ion-view>
+    <ion-header-bar class="bar-dark">
+        <h1 class="title">Quick Bible</h1>
+        <button class="button button-icon icon ion-ios7-search" ng-click="showList()"></button>
+    </ion-header-bar>
+    <ion-content>
+        <div class="card">
+            <div class="item item-text-wrap">
+                This is a basic Card which contains an item that has wrapping text.
+            </div>
+            <div class="item item-divider chapter">
+                I'm a Footer in a Card!
+            </div>
+        </div>
+        <div class="card">
+            <div class="item item-text-wrap">
+                This is a basic Card which contains an item that has wrapping text.
+                This is a basic Card which contains an item that has wrapping text.
+                This is a basic Card which contains an item that has wrapping text.
+            </div>
+            <div class="item item-divider chapter">
+                I'm a Footer in a Card!
+            </div>
+        </div>
+        <div class="card">
+            <div class="item item-text-wrap">
+                This is a basic Card which contains an item that has wrapping text.
+                This is a basic Card which contains an item that has wrapping text.
+                This is a basic Card which contains an item that has wrapping text.
+            </div>
+            <div class="item item-divider chapter">
+                I'm a Footer in a Card!
+            </div>
+        </div>
+        <div class="card">
+            <div class="item item-text-wrap">
+                This is a basic Card which contains an item that has wrapping text.
+                This is a basic Card which contains an item that has wrapping text.
+                This is a basic Card which contains an item that has wrapping text.
+            </div>
+            <div class="item item-divider chapter">
+                I'm a Footer in a Card!
+            </div>
+        </div>
+        <!--<div class="button-bar">-->
+            <!--<a class="button button-outline button-positive" href="#/read">First</a>-->
+            <!--<a class="button button-outline button-positive">Second</a>-->
+            <!--<a class="button button-outline button-positive">Third</a>-->
+        <!--</div>-->
+    </ion-content>
+</ion-view>
 
-	<div class="button-bar">
-	    <a class="button button-outline button-positive" href="#/read">First</a>
-	    <a class="button button-outline button-positive">Second</a>
-	    <a class="button button-outline button-positive">Third</a>
-	</div>
-</ion-content>
 

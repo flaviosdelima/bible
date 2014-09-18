@@ -22,7 +22,8 @@ QuickBible.config(function ($stateProvider, $urlRouterProvider) {
     .state('home', {
         url: '/home',
         templateUrl: 'templates/home-template.html',
-        controller: 'HomeCtrl'
+        controller: 'HomeCtrl',
+        reloadOnSearch: false
     })
     .state('read', {
         url: '/read:bookIndex',
