@@ -25,7 +25,7 @@ QuickBible.config(function ($stateProvider, $urlRouterProvider) {
         controller: 'HomeCtrl'
     })
     .state('read', {
-        url: '/read',
+        url: '/read:bookIndex',
         templateUrl: 'templates/bible-content.html',
         controller: 'BibleReadCtrl'
     })

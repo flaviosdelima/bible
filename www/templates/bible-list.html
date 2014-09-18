@@ -1,13 +1,14 @@
 <ion-modal-view ng-controller="BibleListCtrl" class="dark-overlay">
-    <ion-header-bar class="bar-clear">
-        <button class="button button-icon ion-ios7-close-empty close-icon pull-right"></button>
-    </ion-header-bar>
-    <ion-content class="content-flush has-header">
-        <div class="overlay-spacer"></div>
-        <ion-list>
-            <ion-item ng-repeat="item in items" class="dark-item">
-                {{item.text}}
-            </ion-item>
-        </ion-list>
-    </ion-content>
+    <ion-view class="bible-list">
+        <ion-header-bar class="bar-clear">
+            <button class="button button-icon ion-ios7-close-empty close-icon pull-right" ng-click="closeList()"></button>
+        </ion-header-bar>
+        <ion-content class="has-header">
+            <ion-list>
+                <ion-item ng-repeat="item in items" class="dark-item" index="{{item.index}}"ng-click="goToBible(item.index)">
+                    {{item.name}}
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-view>
 </ion-modal-view>

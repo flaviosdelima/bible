@@ -89,3 +89,7 @@
 .content-flush {
     top: 0px !important;
 }
+
+.bible-list{
+    background-color: rgba(0,0,0,0);
+}
